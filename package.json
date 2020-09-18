@@ -1,0 +1,48 @@
+{
+	"name": "social-media-dashboard-with-theme-switcher",
+	"version": "3.0.0",
+	"description": "Social media dashboard with theme switcher",
+	"main": "src/index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ramsua/social-media-dashboard-with-theme-switcher"
+	},
+	"author": "RAMSUA",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ramsua/social-media-dashboard-with-theme-switcher/issues"
+	},
+	"homepage": "https://github.com/ramsua/social-media-dashboard-with-theme-switcher#readme",
+	"browserslist": [
+		"defaults",
+		"not IE 11",
+		"not IE_Mob 11",
+		"maintained node versions"
+	],
+	"devDependencies": {
+		"@babel/core": "^7.11.0",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/register": "^7.10.5",
+		"autoprefixer": "^9.8.6",
+		"babelify": "^10.0.0",
+		"browser-sync": "^2.26.12",
+		"browserify": "^16.5.2",
+		"cssnano": "^4.1.10",
+		"eslint": "^7.6.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-plugin-import": "^2.22.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-cache-bust": "^1.4.1",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-sass": "^4.1.0",
+		"vinyl-source-stream": "^2.0.0"
+	}
+}
