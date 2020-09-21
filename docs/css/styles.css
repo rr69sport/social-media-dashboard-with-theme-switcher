@@ -1,1 +1,1 @@
-*,:after,:before{box-sizing:border-box}body{margin:0;font-family:sans-serif}
+:root{--light-color:#eee;--dark-color:#191919}.dark-theme{--bg-color:var(--dark-color);--text-color:var(--light-color)}.light-theme{--bg-color:var(--light-color);--text-color:var(--dark-color)}*,:after,:before{box-sizing:border-box}body{margin:0;font-family:sans-serif;background-color:var(--bg-color);color:var(--text-color);transition:color .2s ease-in-out,background-color .2s ease-in}button{border:none;outline:none}ul{margin-top:0;margin-bottom:0;padding-left:0;list-style:none}
