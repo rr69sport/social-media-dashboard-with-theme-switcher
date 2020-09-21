@@ -1,0 +1,13 @@
+:root{
+	--light-color: #eee;
+	--dark-color: #191919;
+}
+
+.dark-theme{
+    --bg-color: var(--dark-color);
+	--text-color: var(--light-color);
+}
+.light-theme{
+	--bg-color: var(--light-color);
+	--text-color: var(--dark-color);
+}

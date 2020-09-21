@@ -11,10 +11,10 @@ html(lang="en" prefix='og:http://ogp.me/ns/website#')
 
         block SEO
 
-    body.body
-        header.main-header
-            h1.main-title= pageTitle
-            
+    body(id="theme" class="light-theme")
+        header(class="main-header")
+            h1(class="main-title")= pageTitle
+            button(id="toggle-theme" class="toggle-theme") Dark theme
         main
             block main
     
