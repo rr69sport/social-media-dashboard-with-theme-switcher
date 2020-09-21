@@ -7,4 +7,105 @@
 -const description = 'Social media dashboard with theme switcher'
 -const keywords = 'social media, theme switcher'
 -const url = 'https://ramsua.github.io/social-media-dashboard-with-theme-switcher/'
--const image = url + 'assets/seo/active-states-dark.jpg'
+-const image = url + 'assets/seo/desktop-preview.jpg'
+
+//- Social networks profiles
+-const urlSvg = './assets/svgs/'
+
+-const facebook = urlSvg + 'icon-facebook.svg'
+-const twitter = urlSvg + 'icon-twitter.svg'
+-const instagram = urlSvg + 'icon-instagram.svg'
+-const youtube = urlSvg + 'icon-youtube.svg'
+-
+    const profiles = [
+        {
+            'nickname': '@RichardLeandroRS',
+            'socialNetworkIcon': facebook,
+            'followers': '1987',
+            'today': '12',
+            'arrow': true //- arrowUp
+
+        },
+        {
+            'nickname': '@RichardRamSua',
+            'socialNetworkIcon': twitter,
+            'followers': '1044',
+            'today': '99',
+            'arrow': true //- arrowUp
+        },
+        {
+            'nickname': '@rr69sport',
+            'socialNetworkIcon': instagram,
+            'followers': '11k',
+            'today': '1099',
+            'arrow': true //- arrowUp
+        },
+        {
+            'nickname': 'RR69Sport',
+            'socialNetworkIcon': youtube,
+            'followers': '8239',
+            'today': '144',
+            'arrow': false //- arrowDown
+        },
+    ]
+
+//- Overview - Today
+-
+    const overviews = [
+        {
+            'text': 'Page Views',
+            'socialNetworkIcon': facebook,
+            'views': '87',
+            'arrow': true, //- arrowUp
+            'percentage': '3%'
+        },
+        {
+            'text': 'Likes',
+            'socialNetworkIcon': facebook,
+            'views': '52',
+            'arrow': false, //- arrowDown
+            'percentage': '2%'
+        },
+        {
+            'text': 'Likes',
+            'socialNetworkIcon': instagram,
+            'views': '5462',
+            'arrow': true, //- arrowUp
+            'percentage': '2257%'
+        },
+        {
+            'text': 'Profiles Views',
+            'socialNetworkIcon': instagram,
+            'views': '52k',
+            'arrow': true, //- arrowUp
+            'percentage': '1375%'
+        },
+        {
+            'text': 'Retweets',
+            'socialNetworkIcon': twitter,
+            'views': '117',
+            'arrow': true, //- arrowUp
+            'percentage': '303%'
+        },
+        {
+            'text': 'Likes',
+            'socialNetworkIcon': twitter,
+            'views': '52',
+            'arrow': true, //- arrowUp
+            'percentage': '553%'
+        },
+        {
+            'text': 'Likes',
+            'socialNetworkIcon': youtube,
+            'views': '107',
+            'arrow': false, //- arrowDown
+            'percentage': '19%'
+        },
+        {
+            'text': 'Total Views',
+            'socialNetworkIcon': youtube,
+            'views': '52k',
+            'arrow': false, //- arrowDown
+            'percentage': '12%'
+        }
+    ]

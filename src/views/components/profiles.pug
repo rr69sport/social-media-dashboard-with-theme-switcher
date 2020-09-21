@@ -1,0 +1,30 @@
+article(class="profiles")
+
+    each profile in profiles
+        section(class="profiles__profile")
+
+            p(class="profiles__nickname")
+
+                span(class="profiles__icon")
+                    +icon("icon", `${profile.socialNetworkIcon}`)
+
+                span(class="profiles__name")= `${profile.nickname}`
+
+            p(class="profiles__followers")= `${profile.followers} followers`
+
+            //- Refactorizar
+            if profile.arrow
+                p(class="profiles__today profiles__today--green")
+
+                    span(class="profiles__arrow")
+                        i(class="arrow")
+                            img(src= `${urlSvg}icon-up.svg`)
+
+                    span= `${profile.today} Today`
+            else
+                p(class="profiles__today profiles__today--red")
+
+                    span(class="profiles__arrow")
+                        +icon('arrow', `${urlSvg}icon-down.svg`)
+                        
+                    span= `${profile.today} Today`
