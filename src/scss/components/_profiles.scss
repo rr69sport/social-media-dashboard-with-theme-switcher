@@ -58,7 +58,6 @@
 
         &--number{
             font-size: 3rem;
-            font-weight: 700;
             color: var(--title_color);
 
             @include transitionProperty(color);
@@ -90,7 +89,6 @@
         align-items: center;
 
         font-size: 80%;
-        font-weight: 700;
     }
     
     @media screen and (min-width:650px) {

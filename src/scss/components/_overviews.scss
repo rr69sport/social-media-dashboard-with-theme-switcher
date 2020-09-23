@@ -34,18 +34,13 @@
     &__percentage{
         justify-content: flex-end;
     }
-    &__text{
-        font-weight: 700;
-    }
     &__views{
         margin: 0;
         font-size: 3rem;
-        font-weight: 700;
         color: var(--title_color);
     }
     &__percentage{
         font-size: 85%;
-        font-weight: 700;
         &--green{
             color: $lime_green;
         }
