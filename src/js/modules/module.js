@@ -4,15 +4,20 @@
  * @param {string} lightTheme - Clase css para tema claro
  * @param {string} darkTheme - Clase css para tema oscuro
  */
-const alternateTheme = (target, lightTheme, darkTheme) => {
+// const alternateTheme = (target, lightTheme, darkTheme) => {
+//     const t = document.getElementById(target);
+//     if (!t) return
+//     if (t.classList.contains(lightTheme)) {
+//         t.classList.remove(lightTheme)
+//         t.classList.add(darkTheme)
+//     } else {
+//         t.classList.remove(darkTheme)
+//         t.classList.add(lightTheme)
+//     }
+// }
+const alternateTheme = (target, toggleClass) => {
     const t = document.getElementById(target);
     if (!t) return
-    if (t.classList.contains(lightTheme)) {
-        t.classList.remove(lightTheme)
-        t.classList.add(darkTheme)
-    } else {
-        t.classList.remove(darkTheme)
-        t.classList.add(lightTheme)
-    }
+    t.classList.toggle(toggleClass)
 }
 export default alternateTheme

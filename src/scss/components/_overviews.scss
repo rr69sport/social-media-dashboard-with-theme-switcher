@@ -1,0 +1,62 @@
+.overviews{
+    display: grid;
+    gap: $gap_unit;
+    &__overview {
+        display: inherit;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        padding: $gap_unit;
+
+        background-color: var(--bg_card);
+
+        border-radius: 5px;
+        cursor: pointer;
+
+        @include transitionProperty(background-color);
+
+        &:hover{
+            background-color: var(--bg_card_hover);
+        }
+    }
+    &__header{
+        grid-column: 1 / -1;
+        margin-top: $gap_unit * 2;
+    }
+    &__text,
+    &__views,
+    &__social-icon,
+    &__percentage{
+        display: flex;
+        align-items: center;
+    }
+    &__social-icon,
+    &__percentage{
+        justify-content: flex-end;
+    }
+    &__text{
+        font-weight: 700;
+    }
+    &__views{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--title_color);
+    }
+    &__percentage{
+        font-size: 85%;
+        &--green{
+            color: $lime_green;
+        }
+        &--red{
+            color: $bright_red;
+        }
+    }
+    @media screen and (min-width:650px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width:1000px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

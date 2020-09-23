@@ -7,23 +7,23 @@ article(class="overviews")
         section(class="overviews__overview")
 
             p(class="overviews__text")= `${overview.text}`
-
-            img(src=`${overview.socialNetworkIcon}`)
+            div(class="overviews__social-icon")
+                img(src=`${overview.socialNetworkIcon}`)
 
             p(class="overviews__views")= `${overview.views}`
 
             //- Refactorizar
             if overview.arrow
-                p(class="overviews__percentage overview__percentage--green")
+                p(class="overviews__percentage")
 
-                    span(class="overviews__arrow")
-                        +icon('arrow', `${urlSvg}icon-up.svg`)
+                    span(class="arrow")
+                        img(src= `${urlSvg}icon-up.svg`)
 
-                    span(class="overviews__percentage")= `${overview.percentage}`
+                    span(class="overviews__percentage  overviews__percentage--green")= `${overview.percentage}`
             else
-                p(class="overviews__percentage overview__percentage--red")
+                p(class="overviews__percentage")
 
-                    span(class="overviews__arrow")
-                        +icon('arrow', `${urlSvg}icon-down.svg`)
+                    span(class="arrow")
+                        img(src=`${urlSvg}icon-down.svg`)
 
-                    span(class="overviews__percentage")= `${overview.percentage}`
+                    span(class="overviews__percentage overviews__percentage--red")= `${overview.percentage}`

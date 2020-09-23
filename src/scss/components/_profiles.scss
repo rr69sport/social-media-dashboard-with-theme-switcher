@@ -1,0 +1,103 @@
+.profiles{
+    display: grid;
+    gap: $gap_unit;
+
+    &__profile{
+        position: relative;
+
+        padding: $gap_unit;
+
+        text-align: center;
+        background-color: var(--bg_card);
+
+        border-radius: 5px;
+
+        overflow: hidden;
+        cursor: pointer;
+
+        @include transitionProperty(background-color);
+
+        &:hover{
+            background-color: var(--bg_card_hover);
+        }
+
+        &--facebook,
+        &--twitter,
+        &--instagram,
+        &--youtube{
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                z-index: 100;
+            }
+        }
+
+        @each $key, $sn in $socialNetwork {
+            &--#{$key} {
+                @if $key == 'instagram' {
+                    &::before{
+                        background-image: $sn;
+                    }
+                } @else {
+                    &::before{
+                        background-color: $sn;
+                    }
+                }
+            }
+        }
+    }
+    &__name{
+        margin-left: $gap_unit / 4;
+    }
+    &__followers{
+        text-transform: uppercase;
+
+        &--number{
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--title_color);
+
+            @include transitionProperty(color);
+        }
+        &--text{
+            letter-spacing: 3px;
+            font-size: 80%;
+        }
+        &--number,
+        &--text{
+            display: block;
+        }
+    }
+    &__today{
+        margin-top: $gap_unit;
+        margin-bottom: 0;
+
+        &--green{
+            color: $lime_green;
+        }
+        &--red{
+            color: $bright_red;
+        }
+    }
+    &__nickname,
+    &__today{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 80%;
+        font-weight: 700;
+    }
+    
+    @media screen and (min-width:650px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width:1000px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

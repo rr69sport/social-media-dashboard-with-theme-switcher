@@ -1,0 +1,26 @@
+.main-header{
+    font-weight: 700;
+    &__column{
+        padding: $gap_unit 0;
+        &:first-child{
+            border-bottom:1px solid var(--text_color);
+            @media screen and (min-width:650px) {
+                border-bottom-color: transparent;
+            }
+
+        }
+    }
+    &__title,
+    &__subtitle{
+        margin: 0;
+    }
+    &__title{
+        margin-bottom: $gap_unit / 4;
+        color: var(--title_color);
+    }
+    @media screen and (min-width:650px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

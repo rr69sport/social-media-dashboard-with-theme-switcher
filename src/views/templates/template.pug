@@ -1,19 +1,18 @@
 block config
     include ../config/vars
-    include ../config/mixins
 doctype html
-html(lang="en" prefix='og:http://ogp.me/ns/website#')
+html(lang="en" prefix='og:http://ogp.me/ns/website#' id="alternate-theme" class="dark-theme")
     head
         title= pageTitle
         meta(charset="utf-8")
         meta(name="viewport" content="initial-scale=1.0, width=device-width")
 
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet")
+        link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' rel='stylesheet')
         link(rel='stylesheet' href='./css/styles.css?t=1595822173097')
 
         block SEO
 
-    body(id="alternate-theme" class="light-theme")
+    body
         block header
         
         block main

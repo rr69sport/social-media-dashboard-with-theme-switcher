@@ -1,0 +1,6 @@
+$time: $time_transition;
+$timing: $timing_function;
+
+@mixin transitionProperty($property...) {
+    transition: $property $time $timing;
+}

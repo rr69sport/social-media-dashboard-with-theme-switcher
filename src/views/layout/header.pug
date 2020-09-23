@@ -1,4 +1,7 @@
 header(class="main-header")
-    h1(class="main-header__title")= pageTitle
-    p(class="main-header__subtitle") Total Followers: 23,004
-    button(id="toggle-theme" class="toggle-theme") Dark theme
+    .main-header__column
+        h1(class="main-header__title")= pageTitle
+        p(class="main-header__subtitle") Total Followers: 23,004
+    .main-header__column
+        button(class="toggle-theme") Dark Mode
+            i(id="toggle-theme" class="toggle-theme__switch")

@@ -3,20 +3,44 @@
 *::before {
     box-sizing: border-box;
 }
+html{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 30vh;
+
+        background-color: var(--bg_pattern);
+
+        z-index: -1;
+
+        @include transitionProperty(background-color);
+    }
+}
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: color .2s ease-in-out, background-color .2s ease-in;
+    margin: 0 auto;
+    padding: $gap_unit;
+    max-width: $max_width;
+
+    font: 1rem 'Inter', sans-serif;
+    color: var(--text_color);
+
+    background-color: var(--bg_body);
+    
+    @include transitionProperty(color, background-color);
 }
 button{
     border: none;
     outline: none;
+    cursor: pointer;
 }
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

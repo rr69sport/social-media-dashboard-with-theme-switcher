@@ -1,13 +1,60 @@
-:root{
-	--light-color: #eee;
-	--dark-color: #191919;
-}
+// - Primary colors
+$lime_green : hsl(163, 72%, 41%);
+$bright_red : hsl(356, 69%, 56%);
 
+// Social networks
+$socialNetwork: (
+	'facebook'  : hsl(208, 92%, 53%),
+	'twitter'   : hsl(203, 89%, 53%),
+	'youtube'   : hsl(348, 97%, 39%),
+	'instagram': linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)),
+);
+
+// Measurements
+$max_width:1440px;
+
+$gap_unit: 1.5rem;
+
+$time_transition: .15s;
+$timing_function: ease-in-out;
+
+:root{
+	font-size  : 14px;
+
+	// Common to both themes
+	--white_hsl: hsl(0, 0%, 100%);
+
+	// Dark theme
+	--dark_desaturated_blue_bg_card_hover: hsl(228, 28%, 25%);
+	--dark_desaturated_blue_bg_card		 : hsl(228, 28%, 20%);
+	--very_dark_blue_top_bg_pattern		 : hsl(232, 19%, 15%);
+	--very_dark_blue_bg_body       		 : hsl(230, 17%, 14%);
+	--desaturated_blue_text        		 : hsl(228, 34%, 66%);
+	--toggle_bg_dark               		 : linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+	
+	// Light theme
+	--light_grayish_blue_bg_card_hover   : hsl(227, 47%, 91%);
+	--light_grayish_blue_bg_card   		 : hsl(227, 47%, 96%);
+	--very_pale_blue_top_bg_pattern		 : hsl(225, 100%, 98%);
+	--dark_grayish_blue_text       		 : hsl(228, 12%, 44%);
+	--very_dark_blue_text          		 : hsl(230, 17%, 14%);
+	--toggle_bg_light              		 : linear-gradient(90deg, hsl(230, 22%, 74%)0, hsl(230, 22%, 74%)100%);
+}
 .dark-theme{
-    --bg-color: var(--dark-color);
-	--text-color: var(--light-color);
+	--bg_card_hover : var(--dark_desaturated_blue_bg_card_hover);
+	--bg_pattern  	: var(--very_dark_blue_top_bg_pattern);
+	--bg_card     	: var(--dark_desaturated_blue_bg_card);
+	--bg_body     	: var(--very_dark_blue_bg_body);
+	--text_color  	: var(--desaturated_blue_text);
+	--toggle_bg   	: var(--toggle_bg_dark);
+	--title_color 	: var(--white_hsl);
 }
 .light-theme{
-	--bg-color: var(--light-color);
-	--text-color: var(--dark-color);
+	--bg_card_hover : var(--light_grayish_blue_bg_card_hover);
+	--bg_pattern  	: var(--very_pale_blue_top_bg_pattern);
+	--bg_card     	: var(--light_grayish_blue_bg_card);
+	--text_color  	: var(--dark_grayish_blue_text);
+	--title_color 	: var(--very_dark_blue_text);
+	--toggle_bg   	: var(--toggle_bg_light);
+	--bg_body     	: var(--white_hsl);
 }
