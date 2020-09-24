@@ -1,4 +1,4 @@
-article(class="profiles")
+div(class="profiles")
 
     each profile in profiles
         section(class=`profiles__profile profiles__profile--${profile.socialNetwork}`)
@@ -6,7 +6,7 @@ article(class="profiles")
             p(class="profiles__nickname")
 
                 span
-                    img(src= `${profile.socialNetworkIcon}`)
+                    img(src= `${profile.socialNetworkIcon}`, alt=`${profile.socialNetworkIcon} icon`)
 
                 span(class="profiles__name")= `${profile.nickname}`
 
@@ -19,13 +19,13 @@ article(class="profiles")
                 p(class="profiles__today profiles__today--green")
 
                     span(class="arrow")
-                        img(src= `${urlSvg}icon-up.svg`)
+                        img(src= `${urlSvg}icon-up.svg`, alt="icon svg")
 
                     span= `${profile.today} Today`
             else
                 p(class="profiles__today profiles__today--red")
 
                     span(class="arrow")
-                        img(src=`${urlSvg}icon-down.svg`)
+                        img(src=`${urlSvg}icon-down.svg`, alt="icon svg")
                         
                     span= `${profile.today} Today`

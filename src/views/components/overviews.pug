@@ -8,7 +8,7 @@ article(class="overviews")
 
             p(class="overviews__text")= `${overview.text}`
             div(class="overviews__social-icon")
-                img(src=`${overview.socialNetworkIcon}`)
+                img(src=`${overview.socialNetworkIcon}`, alt=`${overview.socialNetworkIcon} icon`)
 
             p(class="overviews__views")= `${overview.views}`
 
@@ -17,13 +17,13 @@ article(class="overviews")
                 p(class="overviews__percentage")
 
                     span(class="arrow")
-                        img(src= `${urlSvg}icon-up.svg`)
+                        img(src= `${urlSvg}icon-up.svg`, alt="icon svg")
 
                     span(class="overviews__percentage  overviews__percentage--green")= `${overview.percentage}`
             else
                 p(class="overviews__percentage")
 
                     span(class="arrow")
-                        img(src=`${urlSvg}icon-down.svg`)
+                        img(src=`${urlSvg}icon-down.svg`, alt="icon svg")
 
                     span(class="overviews__percentage overviews__percentage--red")= `${overview.percentage}`
