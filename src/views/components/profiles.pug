@@ -1,9 +1,9 @@
-article(class="profiles")
+div(class="profiles")
 
     each profile in profiles
         section(class=`profiles__profile profiles__profile--${profile.socialNetwork}`)
 
-            p(class="profiles__nickname")
+            h2(class="profiles__nickname")
 
                 span
                     img(src= `${profile.socialNetworkIcon}`, alt=`${profile.socialNetworkIcon} icon`)
